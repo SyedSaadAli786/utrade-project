@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Navbar Pure CSS</title>
+  <link rel="stylesheet" href="style.css">
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="https://cdn.tailwindcss.com"></script>
+
+ <style>
+
+  </style>
+</head>
+<body >
+
+  
+
+ <div class="main">
+
+      <div class="sidebar">
+        <div class="logo-details" onclick="width()">
+          <i class='bx bxl-c-plus-plus icon' ></i>
+            <div class="logo_name"><a href=""><img src="./img/utrade-logo.png" alt=""></a></div>
+            <i class='bx bx-menu  'style="color: black;" id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+         
+          <li>
+            <a href="#">
+              <i class='bx bx-grid-alt' style="color: black;" ></i>
+              <span class="links_name">Dashboard</span>
+              <span class="tooltip">Dashboard</span>
+            </a>
+          </li>
+
+
+
+          <li>
+           <a href="#" >
+             <i class='bx bx-user' style="color: black;" ></i>
+             <span class="links_name"> 
+
+              <span class="dropdown" id="myDropdown">
+                <button onclick="toggleDropdown()">Administration
+                   <i  class="fa-solid fa-caret-down icon" ></i>
+                  </button>
+                <div onmouseleave="toggleDropdown11()"  class="dropdown-content" id="dropdownContent">
+                  <a href="#">List of User</a>                 
+                </div>
+             </span>    
+             </span>
+             <span class="tooltip">Administration</span>
+           </a>
+         </li>
+
+      
+
+          <li>
+           <a href="#">
+             <i class='bx bx-chat' style="color: black;" ></i>
+             <span class="links_name">
+
+              <span class="dropdown" id="myDropdown">
+                <button onclick="toggleDropdown2()">Operation Dashboard
+                  <i  class="fa-solid fa-caret-down icon" ></i>
+                </button>
+                <div onmouseleave="toggleDropdown21()"  class="dropdown-content" id="dropdownContent2">
+                  <a href="#">OPS Monitoring</a>   <br>               
+                  <a href="#">Create Job </a>                 
+                </div>
+             </span>
+            </span>
+            <span class="tooltip">Operation Dashboard</span>
+           </a>
+           
+         </li>
+         <li> 
+           <a href="#">
+             <i class='bx bx-pie-chart-alt-2' style="color: black;" ></i>
+             <span class="links_name"><span class="dropdown" id="myDropdown">
+              <button onclick="toggleDropdown3()">Demands
+                <i  class="fa-solid fa-caret-down icon" ></i>
+              </button>
+              <div onmouseleave="toggleDropdown31()"  class="dropdown-content" id="dropdownContent3">
+                <a href="#">Create Demand</a>                 
+                                
+              </div>
+           </span> </span>
+          </a>
+          <span class="tooltip">Demands</span>        
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-folder' style="color: black;" ></i>
+             <span class="links_name"> <span class="dropdown" id="myDropdown">
+              <button onclick="toggleDropdown4()" >Trade Information Portal
+                <i  class="fa-solid fa-caret-down icon" ></i>
+              </button>
+              <div onmouseleave="toggleDropdown41()" class="dropdown-content" id="dropdownContent4">
+                <a href="#">Valuation Ruling</a>  <br>               
+                <a href="#">Traiff </a>                 
+              </div>
+           </span> </span>
+           </a>
+           <span class="tooltip">Trade Information Portal</span>
+         </li>
+        </ul>
+      </div>
+
+
+      <!-- Dashboard -->
+
+      <section class="home-section" >
+          <div class="text"  >
+
+            <div class="head-nav"   >
+
+              <span class="span-white span-right span-1" ><i class="fa-solid fa-envelope" style="color: #8E1918;" ></i></span>
+              <span class="span  span-2"><i class="fa-solid fa-bell" ></i></span>
+              <span  class="span-input span-3" ><input id="spanInput" class="search" type="search" placeholder="Search..."></span>
+              <span class="span-white span-left span-4"><i class="fa-solid fa-user" style="color: #8E1918;"></i></span>
+              <span class="span span-5"><i class="fa-solid fa-sliders"></i></span>
+              <span class="span-lefts span-6" ><i class="fa-solid fa-right-from-bracket"></i></span>
+
+            </div>
+
+            <div class="seconDiv">
+
+              
+              
+              <div class="btnDiv1">
+                <button class="seconDivbtn1" > <i class="fa-solid fa-list-ul" style="color: #8E1918;"></i> &nbsp;&nbsp; Job List</button>
+
+              </div>
+              <div class="btnDiv2">
+                <button class="seconDivbtn2">List of added</button>
+                <span class="seconDivspan"> - </span>
+                <button class="seconDivbtn3">Cancelled jobs</button>
+              </div>
+              
+                  
+               
+
+            </div>
+
+
+            <div class="thirdDiv">
+              <div class="one"> 
+              <div class="searchDiv">
+                  
+                  <div class="input-group flex-nowrap searchDivin ">
+      
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
+                  </div>
+
+                  <div class="thirdDivBtn">
+                    <button>Create Job</button>
+                  </div>
+              </div>
+
+              <div class="infoDiv">
+
+                <div class="infoDiv-one">
+
+                  <div class="head">6</div>
+                  <div class="text">
+                  
+                    <p class="firstp">New Job-Assigned</p>
+                    <p class="secondp">Work Not Started</p>
+                  </div>
+                  <div class="img">
+                  <p><i class="fa-solid fa-clipboard-list"></i></p>
+                </div>
+
+              </div>
+
+
+
+                <div class="infoDiv-two">
+                   <div class="head">6</div>
+                  <div class="text">
+                  
+                    <p class="firstp">Work Started</p>
+                    <p class="secondp">Vessel Arrived</p>
+                  </div>
+                  <div class="img">
+                  <p><i class="fa-solid fa-ship"></i></p>
+                </div>
+                </div>
+              
+
+              </div>
+
+              <div class="infoDiv2">
+
+                <div class="infoDiv-one">
+
+                  <div class="head">7</div>
+                  <div class="text">
+                  
+                    <p class="firstp">Shipping Related</p>
+                    <p class="secondp">Work</p>
+                  </div>
+                  <div class="img">
+                  <p><i class="fa-solid fa-box-open"></i></p>
+                </div>
+
+              </div>
+
+
+
+                <div class="infoDiv-two">
+                   <div class="head">1</div>
+                  <div class="text">
+                  
+                    <p class="firstp">Ready For</p>
+                    <p class="secondp">Delivery</p>
+                  </div>
+                  <div class="img">
+                  <p><i class="fa-regular fa-handshake"></i></p>
+                </div>
+                </div>
+              
+
+              </div>
+
+
+              <div class="infoDiv3">
+
+                <div class="infoDiv-one">
+
+                  <div class="head">8</div>
+                  <div class="text">
+                  
+                    <p class="firstp">In Customer</p>
+                    <p class="secondp">Progress</p>
+                  </div>
+                  <div class="img">
+                  <p><i class="fa-solid fa-users"></i></p>
+                </div>
+
+              </div>
+
+
+
+                <div class="infoDiv-two">
+                   <div class="head">6</div>
+                  <div class="text">
+                  
+                    <p class="firstp">  </p>
+                    <p class="secondp">N/A</p>
+                  </div>
+                  <div class="img">
+                  <p><i class="fa-solid fa-question"></i></p>
+                </div>
+                </div>
+              
+
+              </div>
+              </div>
+
+
+
+              <div class="two graph">
+                
+              </div>
+
+              
+            </div>
+
+
+            <div class="fouthDiv">
+          
+
+<table class="table1" >
+  <tr>
+    <th>No</th>
+    <th>Job #</th>
+    <th>Type</th>
+    <th>Client</th>
+    <th>Ref #</th>
+    <th>B/L No.</th>
+    <th>GD #</th>
+    <th>Consignment<br>Direction</th>
+    <th>No.Of<br>Days Laps</th>
+    <th>ETA</th>
+    <th>
+      <div class="dropdown" >
+        <button style="color: gray; font-size: 12px; background-color: #fff;" class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </th>
+    <th style="border-style: none ;">Action</th>
+  </tr>
+
+
+  <tr>
+    <td>1</td>
+    <td>07980-11-2023</td>
+    <td>LCL</td>
+    <td>GODIL IMPEX</td>
+    <td>123</td>
+    <td>X96230039747</td>
+    <td>
+      <input type="text">
+    </td>
+    <td>impot</td>
+    <td>3</td>
+    <td>2023-12-10</td>
+    
+    <td>
+      <div class="dropdown" >
+        <button style="color: gray; font-size: 12px; background-color: #fff;" class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </td>
+    <td class="td2" > 
+      <details>
+        <summary>Dropdown <i class="fa-solid fa-caret-down"></i></summary>
+        <ul>
+            <li>Dropdown item 1</li>
+            <li>Dropdown item 2</li>
+            <li>Dropdown item 3</li>
+            <li>Dropdown item 4</li>
+        </ul>
+    </details>
+    </td>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>07980-11-2023</td>
+    <td>LCL</td>
+    <td>GODIL IMPEX</td>
+    <td>123</td>
+    <td>X96230039747</td>
+    <td>
+      <input type="text">
+    </td>
+    <td>impot</td>
+    <td>3</td>
+    <td>2023-12-10</td>
+    
+    <td>
+      <div class="dropdown" >
+        <button style="color: gray; font-size: 12px; background-color: #fff;" class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </td>
+    <td class="td2" > 
+      <details>
+        <summary>Dropdown <i class="fa-solid fa-caret-down"></i></summary>
+        <ul>
+            <li>Dropdown item 1</li>
+            <li>Dropdown item 2</li>
+            <li>Dropdown item 3</li>
+            <li>Dropdown item 4</li>
+        </ul>
+    </details>
+    </td>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>07980-11-2023</td>
+    <td>LCL</td>
+    <td>GODIL IMPEX</td>
+    <td>123</td>
+    <td>X96230039747</td>
+    <td>
+      <input type="text">
+    </td>
+    <td>impot</td>
+    <td>3</td>
+    <td>2023-12-10</td>
+    
+    <td>
+      <div class="dropdown" >
+        <button style="color: gray; font-size: 12px; background-color: #fff;" class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </td>
+    <td class="td2" > 
+      <details>
+        <summary>Dropdown <i class="fa-solid fa-caret-down"></i></summary>
+        <ul>
+            <li>Dropdown item 1</li>
+            <li>Dropdown item 2</li>
+            <li>Dropdown item 3</li>
+            <li>Dropdown item 4</li>
+        </ul>
+    </details>
+    </td>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>07980-11-2023</td>
+    <td>LCL</td>
+    <td>GODIL IMPEX</td>
+    <td>123</td>
+    <td>X96230039747</td>
+    <td>
+      <input type="text">
+    </td>
+    <td>impot</td>
+    <td>3</td>
+    <td>2023-12-10</td>
+    
+    <td>
+      <div class="dropdown" >
+        <button style="color: gray; font-size: 12px; background-color: #fff;" class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </td>
+    <td class="td2" > 
+      <details>
+        <summary>Dropdown <i class="fa-solid fa-caret-down"></i></summary>
+        <ul>
+            <li>Dropdown item 1</li>
+            <li>Dropdown item 2</li>
+            <li>Dropdown item 3</li>
+            <li>Dropdown item 4</li>
+        </ul>
+    </details>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td>1</td>
+    <td>07980-11-2023</td>
+    <td>LCL</td>
+    <td>GODIL IMPEX</td>
+    <td>123</td>
+    <td>X96230039747</td>
+    <td>
+      <input type="text">
+    </td>
+    <td>impot</td>
+    <td>3</td>
+    <td>2023-12-10</td>
+    
+    <td>
+      <div class="dropdown" >
+        <button style="color: gray; font-size: 12px; background-color: #fff;" class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </td>
+    <td class="td2" > 
+      <details>
+        <summary>Dropdown <i class="fa-solid fa-caret-down"></i></summary>
+        <ul>
+            <li>Dropdown item 1</li>
+            <li>Dropdown item 2</li>
+            <li>Dropdown item 3</li>
+            <li>Dropdown item 4</li>
+        </ul>
+    </details>
+    </td>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>07980-11-2023</td>
+    <td>LCL</td>
+    <td>GODIL IMPEX</td>
+    <td>123</td>
+    <td>X96230039747</td>
+    <td>
+      <input type="text">
+    </td>
+    <td>impot</td>
+    <td>3</td>
+    <td>2023-12-10</td>
+    
+    <td>
+      <div class="dropdown" >
+        <button style="color: gray; font-size: 12px; background-color: #fff;" class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </td>
+    <td class="td2" > 
+      <details>
+        <summary>Dropdown <i class="fa-solid fa-caret-down"></i></summary>
+        <ul>
+            <li>Dropdown item 1</li>
+            <li>Dropdown item 2</li>
+            <li>Dropdown item 3</li>
+            <li>Dropdown item 4</li>
+        </ul>
+    </details>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+      </section>
+
+
+   
+
+
+
+    </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+  
+</body>
+</html>
